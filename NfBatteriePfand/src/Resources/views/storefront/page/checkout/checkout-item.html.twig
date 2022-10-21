@@ -1,0 +1,20 @@
+{% sw_extends '@Storefront/storefront/page/checkout/checkout-item.html.twig' %}
+
+{% set NF_CUSTOM_FIELDS_BATTERY_DEPOSIT_NAME = constant('NfBatteriePfand\\NfBatteriePfand::NF_CUSTOM_FIELDS_BATTERY_DEPOSIT_NAME') %}
+{% set batteryDepositLabel = 'customFields.' ~ NF_CUSTOM_FIELDS_BATTERY_DEPOSIT_NAME %}
+
+{% block page_checkout_item_info_image_link %}
+    {% if lineItem.label != batteryDepositLabel %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block page_checkout_item_info_label %}
+    {% if lineItem.label == batteryDepositLabel %}
+        <div class="cart-item-label">
+            {{ 'checkout.line-item.deposit-item.label'|trans({'%referredProductNumber%': lineItem.payload.referredProductNumber}) }}
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% sw_extends "@Storefront/storefront/component/checkout/offcanvas-item.html.twig" %}
+
+{% set NF_CUSTOM_FIELDS_BATTERY_DEPOSIT_NAME = constant('NfBatteriePfand\\NfBatteriePfand::NF_CUSTOM_FIELDS_BATTERY_DEPOSIT_NAME') %}
+{% set batteryDepositLabel = 'customFields.' ~ NF_CUSTOM_FIELDS_BATTERY_DEPOSIT_NAME %}
+
+{% block component_offcanvas_product_label %}
+    {% if lineItem.label == batteryDepositLabel %}
+        <div class="cart-item-label">
+            {{ 'checkout.line-item.deposit-item.label'|trans({'%referredProductNumber%': lineItem.payload.referredProductNumber}) }}
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

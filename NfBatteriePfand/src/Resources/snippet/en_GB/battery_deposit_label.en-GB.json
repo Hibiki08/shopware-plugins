@@ -1,0 +1,9 @@
+{
+  "checkout": {
+    "line-item": {
+      "deposit-item": {
+        "label": "Battery deposit by §10 BattG. for Product: %referredProductNumber%"
+      }
+    }
+  }
+}

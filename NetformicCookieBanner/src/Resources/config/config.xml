@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Cookie banner configuration</title>
+        <title lang="de-DE">Cookie-Banner Konfiguration</title>
+
+        <input-field type="text">
+            <name>settingsId</name>
+            <label>Settings-ID</label>
+            <label lang="de-DE">Einstellungs-ID</label>
+        </input-field>
+    </card>
+</config>

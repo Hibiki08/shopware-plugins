@@ -1,0 +1,9 @@
+{
+  "checkout": {
+    "line-item": {
+      "deposit-item": {
+        "label": "Batteriepfand nach §10 BattG. für Artikel: %referredProductNumber%"
+      }
+    }
+  }
+}

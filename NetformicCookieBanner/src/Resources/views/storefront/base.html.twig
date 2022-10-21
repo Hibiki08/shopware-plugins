@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_header %}
+    {{ parent() }}
+    <script id="usercentrics-cmp" data-settings-id="{{ config('NetformicCookieBanner.config.settingsId') }}" data-language="{{ app.request.locale[:2] }}" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" async></script>
+{% endblock %}
+
+{% block base_cookie_permission %}
+    {# just hiding the default cookie banner here #}
+{% endblock %}
